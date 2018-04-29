@@ -1,6 +1,7 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: [
@@ -22,7 +23,7 @@ module.exports = {
             {
                 test: /\.sass$/,
                 loader: ['css-hot-loader'].concat(ExtractTextPlugin.extract(
-                    ['css-loader?{discardComments:{removeAll:true},minimize:true}', 'sass-loader']
+                    ['css-loader?{discardComments:{removeAll:true},minimize:true,url:false}', 'sass-loader']
                 ))
             }
         ]
@@ -37,6 +38,10 @@ module.exports = {
         new ExtractTextPlugin({
             filename: 'main.css',
             allChunks: true
-        })
+        }),
+        new CopyWebpackPlugin([{
+            from: 'src/static',
+            to: 'static'
+        }])
     ]
 }

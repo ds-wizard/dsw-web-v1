@@ -1,8 +1,79 @@
 html
     head
         title Data Stewardship Wizard
-        link(rel='stylesheet', type='text/css', href='main.css')
-        script(src='/main.js')
-
+        link(href='https://fonts.googleapis.com/css?family=Roboto:400,500,700', rel='stylesheet')
+        link(href='main.css', rel='stylesheet')
+        script(src='main.js')
     body
-        h1 Data Stewardship Wizard
+        .header
+            .container.navbar
+                .brand
+                    .logo
+
+                    h1
+                        span.elixir Elixir
+                        | Data Stewardship Wizard
+                .links
+                    a(href='https://app.dsw.fairdata.solutions/login') Log in
+                    a.signup(href='https://app.dsw.fairdata.solutions/signup') Sign up
+
+            .container.jumbotron
+                p Lorem ipsum dolor sit amet,
+                    br
+                    | consectetur adipiscing elit.
+
+        .content
+            .container.content-row
+                .text
+                    h2 Data Management Plans
+                    p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac dolor sit amet purus malesuada congue. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim.
+                    a(href='#') Explore
+                img(src='static/screenshot-editor.png')
+            .container.content-row
+                .text
+                    h2 Knowledge Model Editor
+                    p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac dolor sit amet purus malesuada congue. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim.
+                    a(href='#') Try it out
+                img(src='static/screenshot-editor.png')
+            .container.content-row
+                .text
+                    h2 Wiki
+                    p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac dolor sit amet purus malesuada congue. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim.
+                    a(href='#') Learn more
+                img(src='static/screenshot-editor.png')
+
+        .footer
+            .container.footer-content
+                .footer-content-section.contanct
+                    strong Contact
+                    ul
+                        li
+                            a(href='mailto:info@dsw.fairdata.solutions') info@dsw.fairdata.solutions
+                .footer-content-section.team
+                    strong Data Stewardship Action Team
+                    ul
+                        li
+                            a(href='http://elixir-czech.cz/', target='_blank')
+                                img(src='static/team-elixir-cz.png', alt='Elixir Czech Republic', title='Elixir Czech Republic')
+                        li
+                            a(href='http://fit.cvut.cz/en', target='_blank')
+                                img(src='static/team-fit-ctu.png', alt='Faculty of Information Technology', title='Faculty of Information Technology')
+                        li
+                            a(href='http://ccmi.fit.cvut.cz/en', target='_blank')
+                                img(src='static/team-ccmi.png', alt='Centre for Conceptual Modelling and Implementation', title='Centre for Conceptual Modelling and Implementation')
+                        li
+                            a(href='http://www.dtls.nl/elixir-nl/elixir-nl-2/', target='_blank')
+                                img(src='static/team-elixir-nl.png', alt='Elixir Netherlands', title='Elixir Netherlands')
+                        li
+                            a(href='http://www.dtls.nl/', target='_blank')
+                                img(src='static/team-dtl.png', alt='Dutch Techcentre for Life Sciences', title='Dutch Techcentre for Life Sciences')
+                .footer-content-section.links
+                    strong Links
+                    ul
+                        li
+                            a(href='http://www.elixir-europe.org/', target='_blank') Elixir&nbsp;Europe
+                        li
+                            a(href='http://www.elixir-europe.org/about/elixir-nodes', target='_blank') Elixir&nbsp;Nodes
+                        li
+                            a(href='https://github.com/DataStewardshipWizard', target='_blank') Github
+
