@@ -22,6 +22,10 @@ body
     background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 35%), url('static/header.jpg') center center
     background-size: cover
 
+    &.small
+        height: 100px
+        background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%), url('static/header.jpg') top center
+
     .navbar
         height: 100px
         display: flex
@@ -46,6 +50,10 @@ body
                 font-size: 18pt
                 font-weight: 500
                 text-shadow: 2px 2px 8px rgba(0, 0, 0, .5)
+
+                a
+                    color: #fff
+                    text-decoration: none
 
                 .elixir
                     display: block
@@ -99,6 +107,10 @@ body
             font-size: 20pt
 
 .content
+    .row
+        max-width: 960px
+        margin: 50px auto
+
     .content-row
         display: flex
         align-items: center

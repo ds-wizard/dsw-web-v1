@@ -1,0 +1,25 @@
+mixin header()
+    .header(class!=attributes.class)
+        .container.navbar
+            .brand
+                .logo
+
+                h1
+                    a(href='/')
+                        span.elixir Elixir
+                        | Data Stewardship Wizard
+            .links
+                a(href='https://app.dsw.fairdata.solutions') Log in
+                a.signup(href='https://app.dsw.fairdata.solutions/signup') Sign up
+
+        if block
+            block
+
+mixin header-small()
+    +header()(class='small')
+
+mixin header-big()
+    +header()
+        .container.jumbotron
+            p Smart Data Management Plans for FAIR Open Science
+            p For serious researchers and data stewards

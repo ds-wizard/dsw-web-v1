@@ -1,0 +1,21 @@
+html
+    include partials/head.pug
+    +head('Privacy | Data Stewardship Wizard')
+    body
+        include partials/header.pug
+        +header-small()
+
+        .content
+            .row
+                h2 Privacy
+
+                h3 Data processed
+                p When you interact with us through our website elixir-czech.cz, we collect the following information:
+                ul
+                    li IP address
+                    li browser
+                    li which of our pages you visit
+                    li date and time of website visit
+                    li type of your operating system
+
+        include partials/footer.pug
