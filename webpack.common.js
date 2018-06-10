@@ -35,6 +35,11 @@ module.exports = {
             filename: 'index.html',
             chunks: ['global', 'index'],
         }),
+        new HtmlWebpackPlugin({
+            template: 'src/privacy.pug',
+            filename: 'privacy.html',
+            chunks: ['global', 'index'],
+        }),
         new ExtractTextPlugin({
             filename: 'main.css',
             allChunks: true
