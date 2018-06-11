@@ -3,6 +3,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const pages = [
+    'index',
+    'privacy',
+    'contact'
+]
+
 module.exports = {
     entry: [
         './src/main.js', './src/sass/main.sass'
@@ -29,17 +35,11 @@ module.exports = {
         ]
     },
 
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: 'src/index.pug',
-            filename: 'index.html',
-            chunks: ['global', 'index'],
-        }),
-        new HtmlWebpackPlugin({
-            template: 'src/privacy.pug',
-            filename: 'privacy.html',
-            chunks: ['global', 'index'],
-        }),
+    plugins: pages.map(page => new HtmlWebpackPlugin({
+        template: `src/${page}.pug`,
+        filename: `${page}.html`,
+        chunks: ['global', 'index'],
+    })).concat([
         new ExtractTextPlugin({
             filename: 'main.css',
             allChunks: true
@@ -48,5 +48,5 @@ module.exports = {
             from: 'src/static',
             to: 'static'
         }])
-    ]
+    ])
 }

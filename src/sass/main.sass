@@ -24,7 +24,10 @@ body
 
     &.small
         height: 100px
-        background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%), url('static/header.jpg') top center
+        background: $color-primary
+
+        @media screen and (max-width: $break-small)
+            height: 150px
 
     .navbar
         height: 100px
@@ -108,15 +111,32 @@ body
 
 .content
     .row
-        max-width: 1280px
+        max-width: 960px
         padding: 0 40px
-        margin: 50px auto
+        margin: 50px auto 100px auto
 
         li
             text-align: justify
 
         ol > li
             margin-bottom: 1em
+
+        .contact-table
+            width: 100%
+            border-collapse: collapse
+
+            tr
+                td, th
+                    padding: 10px
+
+
+                &:nth-child(odd)
+                    background: #f0f0f0
+
+            th
+                vertical-align: top
+                text-align: left
+                width: 15%
 
     .content-row
         display: flex
@@ -199,6 +219,7 @@ body
 
         .footer-content-section
             font-size: 10.5pt
+            min-width: 120px
 
             @media screen and (max-width: $break-small)
                 margin-bottom: 30px

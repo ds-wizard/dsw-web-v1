@@ -1,0 +1,29 @@
+html
+    include partials/head.pug
+    +head('Contact | Data Stewardship Wizard')
+    body
+        include partials/header.pug
+        +header-small()
+
+        .content
+            .row
+                h2 Contact
+
+                table(class="contact-table")
+                    tbody
+                        tr
+                            th Address
+                            td Czech Technical University in Prague, Faculty of Information Technology
+                                br
+                                | Thákurova 5
+                                br
+                                | 160&nbsp;00 Praha 6
+                                br
+                                | Czech Republic
+
+                        tr
+                            th Email
+                            td
+                                a(href='mailto:info@dsw.fairdata.solutions') info@dsw.fairdata.solutions
+
+        include partials/footer.pug
