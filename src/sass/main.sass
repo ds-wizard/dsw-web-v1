@@ -6,6 +6,10 @@ body
     margin: 0
     padding: 0
     font-family: 'Roboto', sans-serif
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: space-between
 
     a
         color: $color-primary
@@ -28,9 +32,6 @@ body
     &.small
         height: 100px
         background: $color-primary
-
-        @media screen and (max-width: $break-small)
-            height: 150px
 
     .navbar
         height: 100px
@@ -71,7 +72,7 @@ body
             text-align: right
 
             @media screen and (max-width: $break-small)
-                margin-top: 10px
+                display: none
 
             a
                 font-size: 10.5pt
