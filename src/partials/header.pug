@@ -2,12 +2,11 @@ mixin header()
     .header(class!=attributes.class)
         .container.navbar
             .brand
-                .logo
-
                 h1
                     a(href='/')
-                        span.elixir Elixir
+                        img(src='static/logo-hat.svg')
                         | Data Stewardship Wizard
+
             .links
                 a.bordered(href='https://app.dsw.fairdata.solutions') Go to App
 
