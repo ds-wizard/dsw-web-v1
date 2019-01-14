@@ -2,7 +2,7 @@
   "name": "dsw-web",
   "version": "0.1.0",
   "scripts": {
-    "build": "rm -rf ./dist && webpack --config webpack.prod.js",
+    "build": "bin/build.sh",
     "start": "webpack-dev-server --open --config webpack.dev.js"
   },
   "devDependencies": {
