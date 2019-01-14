@@ -3,7 +3,7 @@ sudo: required
 language: node_js
 
 node_js:
-  - "8.0.0"
+  - "8.12.0"
 
 services:
   - docker
@@ -12,6 +12,7 @@ env:
   - IMAGE_TAG="$DOCKER_REGISTRY/elixir/dsw-web:latest"
 
 install:
+  - npm install -g npx
   - npm install
 
 script:
