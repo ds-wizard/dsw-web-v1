@@ -2,8 +2,13 @@ html
     include partials/head.pug
     +head('Data Stewardship Wizard')
     body
-        include partials/header.pug
-        +header-big()
+        .header-landing
+            a.app-link(href='https://app.dsw.fairdata.solutions') Go to App
+            img.logo(src='static/logo-horizontal.svg')
+            .subtitle
+                p Smart Data Management Plans for FAIR Open Science
+                p For Serious Researchers and Data Stewards
+
 
         .content
             .container.content-row

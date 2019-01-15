@@ -1,23 +1,7 @@
-mixin header()
-    .header(class!=attributes.class)
-        .container.navbar
-            .brand
-                h1
-                    a(href='/')
-                        img(src='static/logo-hat.svg')
-                        | Data Stewardship Wizard
-
-            .links
-                a.bordered(href='https://app.dsw.fairdata.solutions') Go to App
-
-        if block
-            block
-
-mixin header-small()
-    +header()(class='small')
-
-mixin header-big()
-    +header()
-        .container.jumbotron
-            p Smart Data Management Plans for FAIR Open Science
-            p For serious researchers and data stewards
+.header
+    .container.navbar
+        .brand
+            h1
+                a(href='/')
+                    img(src='static/logo-hat.svg')
+                    | Data Stewardship Wizard
