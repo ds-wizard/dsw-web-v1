@@ -1,8 +1,10 @@
 $break-medium: 960px
 $break-small: 780px
 $color-primary: #f15a24
+$color-white: #fff
 $color-light-gray: #eee
-$color-dark-gray: #4d4948;
+$color-dark-gray: #4d4948
+$color-transparent: rgba(0,0,0,0)
 
 body
     margin: 0
@@ -16,6 +18,44 @@ body
     a
         color: $color-primary
 
+.bordered
+    display: inline-block
+    text-decoration: none
+    font-weight: 500
+    font-size: 14pt
+    transition: background-color 150ms, color 150ms
+    padding: 10px 25px
+    border: 2px solid
+    border-radius: 5px
+    background-color: $color-transparent
+
+    &:hover
+        text-decoration: none
+
+    &.primary
+        color: $color-primary
+        border-color: $color-primary
+
+        &:hover
+            background-color: $color-primary
+            color: $color-white
+
+    &.secondary
+        color: $color-dark-gray
+        border-color: $color-dark-gray
+
+        &:hover
+            background-color: $color-dark-gray
+            color: $color-white
+
+        &.reversed
+            color: $color-white
+            border-color: $color-white
+
+            &:hover
+                background-color: $color-white
+                color: $color-dark-gray
+
 .container
     max-width: 1280px
     padding: 0 40px
@@ -25,7 +65,7 @@ body
         padding: 0 20px
 
 .header-landing
-    color: #fff
+    color: $color-white
     background: $color-light-gray
     text-align: center
 
@@ -33,21 +73,6 @@ body
         position: absolute
         right: 20px
         top: 20px
-        font-weight: 500
-        margin-left: 30px
-        color: $color-primary
-        text-decoration: none
-        transition: background-color 150ms, color 150ms
-        background-color: $color-light-gray
-        padding: 10px 25px
-        font-size: 14pt
-        border: 2px solid $color-primary
-        border-radius: 5px
-
-        &:hover
-            background-color: $color-primary
-            color: #fff
-            text-decoration: none
 
         @media screen and (max-width: $break-small)
             display: none
@@ -103,6 +128,15 @@ body
                     text-decoration: none
 
 .content
+    h2
+        font-size: 18pt
+        font-weight: 500
+        margin-top: 0
+
+    p
+        font-size: 14pt
+        line-height: 24.75pt
+
     .row
         max-width: 960px
         padding: 0 40px
@@ -130,21 +164,24 @@ body
                 text-align: left
                 width: 15%
 
-    .content-row
-        display: flex
-        align-items: center
+    .container
         margin: 200px auto
 
         @media screen and (max-width: $break-medium)
             margin: 100px auto
 
-        @media screen and (max-width: $break-small)
-            display: block
-
         &:first-child
             margin-top: 100px
 
-        &:nth-child(odd)
+    .content-row
+        display: flex
+        align-items: center
+        margin: 200px auto
+
+        @media screen and (max-width: $break-small)
+            display: block
+
+        &.flipped
             flex-direction: row-reverse
 
             img
@@ -155,29 +192,8 @@ body
                 margin-left: 60px
 
         .text
-            h2
-                font-size: 18pt
-                font-weight: 500
-                margin-top: 0
-
-            p
-                font-size: 14pt
-                line-height: 24.75pt
-
             a
-                display: inline-block
                 margin-top: 10px
-                padding: 10px 25px
-                font-size: 14pt
-                border: 2px solid $color-primary
-                border-radius: 5px
-                color: $color-primary
-                text-decoration: none
-                transition: background-color 150ms, color 150ms
-
-                &:hover
-                    color: #fff
-                    background: $color-primary
 
         img
             display: block
@@ -192,9 +208,69 @@ body
                 max-width: 100%
                 margin: 40px auto !important
 
+    .options
+        .options-row
+            display: flex
+            justify-content: space-between
+
+            @media screen and (max-width: $break-small)
+                display: block
+
+            .option
+                width: 30%
+                border-radius: 5px
+                background: $color-light-gray
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                box-shadow: 0 5px 30px rgba(0,0,0,.15)
+
+                @media screen and (max-width: $break-small)
+                    width: 100%
+
+                h3
+                    font-size: 16pt
+                    padding: 20px
+                    margin: 0
+                    border-bottom: 1px solid darken($color-light-gray, 15)
+
+                .description
+                    padding: 0 20px
+
+                    ul
+                        padding-left: 20px
+
+                        li
+                            list-style-type: disc
+                            font-size: 14pt
+
+
+                .action
+                    text-align: center
+                    margin: 20px 0
+
+                &.dark
+                    background: $color-dark-gray
+                    color: $color-white
+
+                    h3
+                        border-bottom-color: lighten($color-dark-gray, 10)
+
+                &.primary
+                    background: $color-primary
+                    color: $color-white
+
+                    h3
+                        border-bottom-color: darken($color-primary, 15)
+
+                    a
+                        color: $color-white
+
+
+
 .footer
     background: #4A4A4A
-    color: #fff
+    color: $color-white
     min-height: 200px
     padding: 20px 0
     display: flex
@@ -256,7 +332,7 @@ body
                     a
                         display: inline-block
                         padding: 2px 0
-                        color: #fff
+                        color: $color-white
                         opacity: 0.5
                         transition: opacity 150ms
 
