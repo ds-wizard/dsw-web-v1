@@ -1,0 +1,18 @@
+html
+    include partials/head.pug
+    +head('Media | Data Stewardship Wizard')
+    body
+        include partials/header.pug
+
+        .content
+            .row
+                h2 Media
+
+                p Do you want to write about, present or somehow mention the Data Stewardship Wizard? We are happy about it and to make it easier for you, we've prepared a Media Kit with materials (logo variants, screenshots, diagrams, etc.) that you can download and use!
+
+                p.download
+                    a.bordered.primary(href="/static/dsw-media-kit.zip") Download Media Kit
+
+                p When using the logo, please don't change the colours, use one of the variants available in the Media Kit. Give it some space, at least the width of letter D around the logo (images in the Media Kit have enough padding for that). Also, use the variant with the full text "DATA STEWARDSHIP WIZARD" only if it's well readable, otherwise use another one.
+
+        include partials/footer.pug
