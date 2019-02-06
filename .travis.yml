@@ -9,7 +9,7 @@ services:
   - docker
 
 env:
-  - IMAGE_TAG="$DOCKER_REGISTRY/elixir/dsw-web:latest"
+  - IMAGE_TAG="$DOCKER_REGISTRY/dsw-web:latest"
 
 install:
   - npm install -g npx
