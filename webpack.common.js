@@ -6,7 +6,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const pages = [
     'index',
     'privacy',
-    'contact'
+    'contact',
+    'media'
 ]
 
 module.exports = {
