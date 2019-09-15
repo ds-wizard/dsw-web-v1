@@ -1,7 +1,20 @@
 .header
-    .container.navbar
-        .brand
-            h1
-                a(href='/')
-                    img(src='static/logo-hat.svg')
-                    | Data Stewardship Wizard
+    .logo
+        a(href="/")
+            img(src="/static/dsw-logo-horizontal-color-transparent.svg")
+    .nav
+        .nav-full
+            a(href="/features.html") Features
+            a(href="/media.html") Media
+            a.get-started(href="/get-started.html") Get Started
+        .nav-collapsed
+            a.open-mobile-menu
+                img(src="/static/icons/bars.svg")
+.mobile-menu
+    a.close-mobile-menu(href="#")
+        img(src="/static/icons/times.svg")
+
+    .nav
+        a(href="/features.html") Features
+        a(href="/media.html") Media
+        a.get-started(href="/get-started.html") Get Started

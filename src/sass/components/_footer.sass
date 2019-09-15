@@ -1,0 +1,107 @@
+@import '../variables'
+@import '../mixins'
+
+.footer
+    background: $color-background-light
+    font-size: $font-size-small
+    color: $color-body
+    margin-top: 8rem
+    padding: 3rem 1rem
+    display: flex
+    justify-content: space-between
+
+    @media (max-width: $breakpoint-medium)
+        display: block
+
+        .footer-section
+            margin-bottom: 4rem
+
+            &.team
+                padding: 0 !important
+
+    .footer-section
+        strong, label
+            font-weight: bold
+            display: block
+            margin-bottom: .5rem
+
+        a
+            color: $color-body
+
+            &:hover
+                color: $color-primary
+
+        ul
+            margin: 0
+            padding: 0
+
+            li
+                list-style-type: none
+
+                a
+                    white-space: nowrap
+
+        &.team
+            padding: 0 2rem
+
+        .icon-list
+            li
+                display: inline-block
+                margin-right: 1.25rem
+                margin-bottom: 1.25rem
+
+                a
+                    img
+                        @include transition-default(opacity)
+                        opacity: .5
+                        height: 2.5rem
+
+                    &:hover
+                        img
+                            opacity: 1
+
+            &.follow
+                li
+                    margin-right: 0.5rem
+
+                    a
+                        img
+                            height: 1.75rem
+
+#mc_embed_signup
+    margin-bottom: 2rem
+
+    @media (max-width: $breakpoint-medium)
+        margin-bottom: 4rem
+
+    .form-group
+        white-space: nowrap
+
+        input
+            font-family: $font-default !important
+            font-size: $font-size-small !important
+            border: none
+            padding: .75rem 1rem
+            color: $color-body
+            outline: 0 !important
+            -webkit-appearance: none
+            box-shadow: none
+
+            &::placeholder
+                color: $light-grey
+
+        input[type="email"]
+            @include border-left-radius($border-radius)
+            min-width: 200px
+
+
+        input[type="submit"]
+            @include border-right-radius($border-radius)
+            @include transition-default(background-color)
+            cursor: pointer
+            background: $color-primary
+            color: $white
+            font-weight: bold
+
+            &:hover
+                background: $color-primary-hover

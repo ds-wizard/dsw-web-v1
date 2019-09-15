@@ -1,0 +1,64 @@
+html
+    include partials/head.pug
+    +head('Get Started | Data Stewardship Wizard')
+    body
+        include partials/header.pug
+
+        .container.container-full.container-get-started
+            h2 Get Started Using the Data Stewardship Wizard
+
+            .variants
+                .variant
+                    h3 Demo
+                    .tagline For exploring the DSW features
+                    ul.description
+                        li Easy to sign up and use
+                        li A shared instance with other users
+                        li
+                            strong Not for serious usage
+                    ul.features
+                        li Questionnaires &amp; DMPs
+                        li Knowledege Models Management
+                    .variant-cta
+                        a.btn.btn-primary(href="https://demo.ds-wizard.org/signup") Try the demo
+
+                .variant
+                    h3 Researchers
+                    .tagline For individual researchers
+                    ul.description
+                        li Easy to sign up and use
+                        li Ready to use Knowledge Models
+                        li Privacy and stability
+                    ul.features
+                        li Questionnaires &amp; DMPs
+                    .variant-cta
+                        a.btn.btn-primary(href="https://researchers.ds-wizard.org/signup") Start planning
+
+                .variant
+                    h3 Self-Managed
+                    .tagline For organizations
+                    ul.description
+                        li All the DSW features available
+                        li Your own instance
+                        li You need to host and run the instance by yourself
+                    ul.features
+                        li Questionnaires &amp; DMPs
+                        li Knowledege Models Management
+                        li User Management &amp; Organization Settings
+                        li Features configuration &amp; visual style customizations
+                    .variant-cta
+                        a.btn.btn-primary(href="http://docs.ds-wizard.org/en/latest/admin/installation.html") Install
+
+                .variant
+                    h3 DSW Cloud
+                    .tagline For organizations
+                    p.description We offer managing the DS Wizard instance for interesting projects that want to use it seriously but don’t want to run it by themselves.
+                    ul.features
+                        li Questionnaires &amp; DMPs
+                        li Knowledege Models Management
+                        li User Management &amp; Organization Settings
+                        li Features configuration &amp; visual style customizations
+                    .variant-cta
+                        a.btn.btn-default(href="/contact.html") Contact us
+
+        include partials/footer.pug

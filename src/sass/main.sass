@@ -1,516 +1,347 @@
-$break-medium: 1120px
-$break-small: 780px
-$color-primary: #f15a24
-$color-white: #fff
-$color-light-gray: #eee
-$color-dark-gray: #4d4948
-$color-transparent: rgba(0,0,0,0)
-$color-researchers: #8B572A
-$color-self-hosted: #0033aa
+@import 'variables'
+@import 'mixins'
+
+
+@import 'components/header'
+@import 'components/footer'
+
 
 body
+    font-family: $font-default
     margin: 0
-    padding: 0
-    font-family: 'Roboto', sans-serif
-    min-height: 100vh
+    min-height: calc(100vh - #{$header-height})
     display: flex
     flex-direction: column
     justify-content: space-between
+    padding-top: $header-height
+    font-size: $font-size-text
+    line-height: 1.5
+    color: $color-body
 
-    a
-        color: $color-primary
+    @media (max-width: $breakpoint-small)
+        min-height: calc(100vh - #{$header-height-mobile})
+        padding-top: $header-height-mobile
 
-.bordered
-    display: inline-block
-    text-decoration: none
-    font-weight: 500
-    font-size: 14pt
-    transition: background-color 150ms, color 150ms
-    padding: 10px 25px
-    border: 2px solid
-    border-radius: 5px
-    background-color: $color-transparent
+h2
+    font-size: $font-size-heading
+
+    @media (max-width: $breakpoint-small)
+        font-size: $font-size-large
+
+a
+    color: $color-primary
 
     &:hover
-        text-decoration: none
+        color: $color-primary-hover
 
-    &.primary
-        color: $color-primary
-        border-color: $color-primary
+li
+    font-size: $font-size-text
 
-        &:hover
-            background-color: $color-primary
-            color: $color-white
-
-    &.secondary
-        color: $color-dark-gray
-        border-color: $color-dark-gray
-
-        &:hover
-            background-color: $color-dark-gray
-            color: $color-white
-
-        &.reversed
-            color: $color-white
-            border-color: $color-white
-
-            &:hover
-                background-color: $color-white
-                color: $color-dark-gray
+p
+    text-align: justify
 
 .container
-    max-width: 1280px
-    padding: 0 40px
-    margin: 0 auto
+    margin: auto
+    padding: 0 1rem
+    width: 100%
+    box-sizing: border-box
 
-    @media screen and (max-width: $break-medium)
-        padding: 0 20px
+    &-default
+        max-width: $width-default
 
-.header-landing
-    color: $color-white
-    background: $color-light-gray
-    text-align: center
+    &-full
+        max-width: $width-full
 
-    .app-link
-        position: absolute
-        right: 20px
-        top: 20px
+.contact-table
+    width: 100%
+    border-collapse: collapse
 
-        @media screen and (max-width: $break-small)
-            display: none
+    tr
+        td, th
+            padding: 1rem 0
 
-    .logo
-        width: 100%
-        max-width: 800px
+    th
+        vertical-align: top
+        text-align: left
+        width: 15%
 
+        @media (max-width: $breakpoint-medium)
+                width: 30%
 
-    .subtitle
-        width: 100%
-        text-align: center
-        color: $color-dark-gray
-        font-size: 27pt
-        padding-bottom: 60px
+.btn
+    @include border-radius-default
+    @include transition-default(background-color)
+    color: $white
+    font-size: $font-size-text
+    padding: .75rem 1rem
+    text-decoration: none
+    font-weight: bold
+    display: inline-block
 
-        @media screen and (max-width: $break-medium)
-            font-size: 22pt
+    &:hover
+        color: $white
 
-        @media screen and (max-width: $break-small)
-            font-size: 16pt
+    &-primary
+        background: $color-primary
 
-        p
-            margin: 5px 20px
+        &:hover
+            background: $color-primary-hover
 
-.header
-    color: $color-dark-gray
-    height: 100px
-    background: $color-light-gray
+    &-default
+        background: $color-secondary
 
-    .navbar
-        height: 100px
-        display: flex
-        justify-content: space-between
+        &:hover
+            background: $color-secondary-hover
+
+    &-cta
+        @include box-shadow-soft
+        display: inline-flex
         align-items: center
-
-        .brand
-            display: flex
-            align-items: center
-
-            h1
-                font-size: 18pt
-                font-weight: 500
-
-                img
-                    height: 40px
-                    vertical-align: middle
-                    margin-top: -5px
-                    margin-right: 20px
-
-                a
-                    color: $color-dark-gray
-                    text-decoration: none
-
-.content
-    h2
-        font-size: 18pt
-        font-weight: 500
-        margin-top: 0
-
-    p
-        font-size: 14pt
-        line-height: 24.75pt
-
-    .row
-        max-width: 960px
-        padding: 0 40px
-        margin: 50px auto 100px auto
-
-        li
-            text-align: justify
-
-        ol > li
-            margin-bottom: 1em
-
-        .contact-table
-            width: 100%
-            border-collapse: collapse
-
-            tr
-                td, th
-                    padding: 10px
-
-                &:nth-child(odd)
-                    background: #f0f0f0
-
-            th
-                vertical-align: top
-                text-align: left
-                width: 15%
-
-        .download
-            text-align: center
-            padding: 50px 0
-
-    .container
-        margin: 200px auto
-
-        @media screen and (max-width: $break-medium)
-            margin: 100px auto
-
-        &:first-child
-            margin-top: 100px
-
-    .content-row
-        display: flex
-        align-items: center
-        margin: 200px auto
-
-        @media screen and (max-width: $break-small)
-            display: block
-
-        &.flipped
-            flex-direction: row-reverse
-
-            img
-                margin-right: 60px
-
-        &:nth-child(even)
-            img
-                margin-left: 60px
-
-        .text
-            a
-                margin-top: 10px
+        white-space: nowrap
+        justify-content: space-around
+        padding: .75rem 2rem
 
         img
-            display: block
-            flex: 0 0 450px
-            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15)
+            max-width: 1rem
+            max-height: 1rem
+            margin-right: .5rem
 
-            @media screen and (max-width: $break-medium)
-                flex: 0 0 315px
+.container-media
+    .wrapper
+        display: flex
+        justify-content: space-between
 
-            @media screen and (max-width: $break-small)
-                width: 450px
+        .content
+            width: 62%
+
+            @media (max-width: $breakpoint-medium)
+                width: 100%
+
+        .illustration
+            width: 33%
+
+            @media (max-width: $breakpoint-medium)
+                display: none
+
+            img
                 max-width: 100%
-                margin: 40px auto !important
 
-    .options
-        .options-row
-            display: flex
-            justify-content: space-between
+    .download
+        padding: 1rem 0
+        text-align: center
 
-            @media screen and (max-width: $break-small)
-                display: block
+.container-features
+    .feature
+        display: flex
+        justify-content: space-between
+        margin-bottom: 10rem
 
-            .option
-                width: 30%
-                border-radius: 5px
-                background: $color-light-gray
-                display: flex
-                flex-direction: column
-                justify-content: space-between
-                box-shadow: 0 5px 30px rgba(0,0,0,.15)
+        @media (max-width: $breakpoint-small)
+            display: block
+            margin-bottom: 5rem
 
-                @media screen and (max-width: $break-small)
-                    width: 100%
+        &:nth-child(even)
+            flex-direction: row-reverse
 
-                h3
-                    font-size: 16pt
-                    padding: 20px
-                    margin: 0
-                    border-bottom: 1px solid darken($color-light-gray, 15)
+        .description
+            width: 50%
 
-                .description
-                    padding: 0 20px
+            @media (max-width: $breakpoint-small)
+                width: 100%
 
-                    ul
-                        padding-left: 20px
+            h3
+                font-size: $font-size-large
 
-                        li
-                            list-style-type: disc
-                            font-size: 14pt
+        .image
+            width: 45%
 
+            @media (max-width: $breakpoint-small)
+                width: 100%
 
-                .action
-                    text-align: center
-                    margin: 20px 0
+            img
+                @include box-shadow-soft
+                @include border-radius-default
+                max-width: 100%
 
-                &.dark
-                    background: $color-dark-gray
-                    color: $color-white
+    .learn-more
+        text-align: center
 
-                    h3
-                        border-bottom-color: lighten($color-dark-gray, 10)
-
-                &.primary
-                    background: $color-primary
-                    color: $color-white
-
-                    h3
-                        border-bottom-color: darken($color-primary, 15)
-
-                    a
-                        color: $color-white
-
+.container-get-started
     .variants
         display: grid
-        grid-template-columns: 25% 25% 25% 25%
-        grid-column-gap: 1rem
+        grid-template-columns: 1fr 1fr 1fr 1fr
+        grid-column-gap: .75rem
         grid-row-gap: 3rem
 
-        @media screen and (max-width: $break-medium)
-            grid-template-columns: 50% 50%
+        @media (max-width: $breakpoint-large)
+            grid-template-columns: 1fr 1fr
 
-        @media screen and (max-width: $break-small)
+        @media (max-width: $breakpoint-small)
             grid-template-columns: 100%
 
         .variant
-            box-shadow: 0 5px 15px rgba(0,0,0,.15)
-            background: $color-light-gray
             display: flex
             flex-direction: column
-            font-size: 12pt
-            line-height: 1.5
-            border-radius: 5px
+            position: relative
+            background: $white
 
-            &.researchers
-                h3
-                    background: $color-researchers
-                    color: #fff
-
-                .action
-                    .bordered
-                        border-color: $color-researchers
-                        color: $color-researchers
-
-                        &:hover
-                            background: $color-researchers
-                            color: #fff
-
-                .pricing
-                    color: $color-researchers
-
-
-            &.self-hosted
-                h3
-                    background: $color-self-hosted
-                    color: #fff
-
-                .action
-                    .bordered
-                        border-color: $color-self-hosted
-                        color: $color-self-hosted
-
-                        &:hover
-                            background: $color-self-hosted
-                            color: #fff
-
-                .pricing
-                    color: $color-self-hosted
-
-
-            &.hosted-by-us
-                h3
-                    background: $color-primary
-                    color: #fff
-
-                .action
-                    .bordered
-                        border-color: $color-primary
-                        color: $color-primary
-
-                        &:hover
-                            background: $color-primary
-                            color: #fff
-
-                .pricing
-                    color: $color-primary
-
-            p
-                font-size: 12pt
-                line-height: 1.5
-
-            ul
-                padding-left: 1.5rem
+            &::before
+                @include box-shadow-soft
+                content: ''
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+                z-index: -1
 
             h3
-                margin-top: 0
-                border-bottom: 1px solid darken($color-light-gray, 15)
-                border-top-left-radius: 5px
-                border-top-right-radius: 5px
+                font-size: $font-size-large
+                color: $color-body
+                width: 100%
                 text-align: center
-                padding: 1rem
-                font-weight: normal
-
-                &.researchers
-                    background: #8B572A
-                    color: #fff
+                margin: 1rem 0
 
             .tagline
-                font-style: italic
+                font-size: $font-size-text
+                color: $color-text-light
+                width: 100%
                 text-align: center
+
+            .variant-cta
+                text-align: center
+                padding: 1rem 0
+
+                .btn
+                    min-width: 140px
 
             .description
-                min-height: 8rem
-                padding: 0 1rem
-
-
-            .features
-                flex-grow: 1
-                padding: 0 1rem
-
-                h4
-                    margin: 1rem 0 0 0
-
-                ul
-                    list-style: none
-
-                    li:before
-                        content: '✓'
-                        width: 1.5rem
-                        margin-left: -1.5rem
-                        display: inline-block
-                        text-align: center
-
-            .pricing
-                font-size: 16pt
-                text-align: center
-
-                small
-                    display: block
-
-            .action
-                border-top: 1px solid darken($color-light-gray, 15)
-                margin: 1rem 0
-                padding-top: 1rem
-                display: flex
-                align-items: center
-                justify-content: center
-                text-align: center
-                min-height: 55px
-
-                p
-                    margin: 0
-
-
-.footer
-    background: #4A4A4A
-    color: $color-white
-    min-height: 200px
-    padding: 20px 0
-    display: flex
-    align-items: center
-
-    .footer-content
-        width: 100%
-        display: flex
-        justify-content: space-between
-        align-items: top
-
-        @media screen and (max-width: $break-small)
-            display: inline-block
-
-        .footer-content-section
-            font-size: 10.5pt
-            min-width: 120px
-
-            @media screen and (max-width: $break-small)
-                margin-bottom: 30px
-
-                &:last-child
-                    margin-bottom: 0
-
-            strong
-                font-weight: 500
-
-            &.contact
-                flex-grow: 1
-
-            &.team
-                flex-grow: 3
-                padding: 0 80px
-
-                ul
-                    li
-                        display: inline-block
-                        margin-right: 20px
-                        margin-bottom: 20px
-
-                        img
-                            height: 40px
-
-                @media screen and (max-width: $break-medium)
-                    padding: 0 20px
-
-                @media screen and (max-width: $break-small)
-                    padding: 0
-
-            &.links
-                flex-grow: 1
+                min-height: 7rem
+                margin-top: 2rem
 
             ul
-                margin: 1em 0
-                padding: 0
-                list-style: none
+                padding: 0 1rem 0 2rem
+
+                &.features
+                    flex-grow: 1
+
+                    li
+                        list-style: none
+                        position: relative
+
+                        &::before
+                            content: " "
+                            width: 1rem
+                            height: 1rem
+                            background: url(/static/icons/check.svg) 50% no-repeat
+                            position: absolute
+                            left: -1.5rem
+                            top: .45rem
 
                 li
-                    a
-                        display: inline-block
-                        padding: 2px 0
-                        color: $color-white
-                        opacity: 0.5
-                        transition: opacity 150ms
+                    list-style-type: disc
+                    line-height: 1.75rem
 
-                        &:hover
-                            opacity: 0.8
+            p
+                padding: 0 1rem
 
-#mc_embed_signup
-    background: #eee
-    clear: left
-    width: 100%
-    padding: 50px 20px
-    box-sizing: border-box
+.container-homepage
+    max-width: $width-homepage
 
-    label
-        font-size: 14pt
+    h1
+        text-align: center
+        font-size: $font-size-xl
+        margin: 3rem 0
 
-    input.email
-        font-family: 'Roboto', sans-serif
-        font-size: 10.5pt
-        font-weight: 500
-        padding: 10px 20px
-        height: initial !important
+        @media (max-width: $breakpoint-medium)
+            font-size: $font-size-heading
 
-    .button
-        font-family: 'Roboto', sans-serif
-        font-size: 10.5pt
-        font-weight: 500
-        padding: 10px 20px
-        height: initial
-        line-height: initial
-        border: 1px solid #ABB0B2
+        @media (max-width: $breakpoint-small)
+            font-size: $font-size-large
 
-input
-    -webkit-appearance: none
-    -moz-appearance: none
-    appearance: none
+    .tagline
+        text-align: center
+        font-size: $font-size-heading
+        margin-bottom: 3rem
+
+        @media (max-width: $breakpoint-medium)
+            font-size: $font-size-large
+
+        @media (max-width: $breakpoint-small)
+            font-size: $font-size-medium
+
+    .get-started
+        text-align: center
+        margin-bottom: 5rem
+
+        .btn-cta
+            padding: .75rem 3rem
+
+            img
+                max-width: 1.5rem
+                max-height: 1.5rem
+
+    .app
+        margin-bottom: 10rem
+
+        img
+            @include box-shadow-hard
+            @include border-radius-default
+            width: 100%
+
+    .section
+        .workflow
+            display: flex
+            justify-content: space-between
+            margin-bottom: 8rem
+
+            @media (max-width: $breakpoint-small)
+                display: block
+
+            .step
+                width: 25%
+                margin-bottom: 4rem
+
+                @media (max-width: $breakpoint-small)
+                    width: 100%
+                    margin-bottom: 0
+                    margin-top: -2rem
+
+                h3
+                    font-size: $font-size-large
+                    text-align: center
+
+                    @media (max-width: $breakpoint-medium)
+                        font-size: $font-size-medium
+
+                .image
+                    min-height: 15rem
+                    max-width: 100%
+                    display: flex
+                    align-items: flex-end
+
+                    @media (max-width: $breakpoint-small)
+                        justify-content: center
+
+                    img
+                        max-width: 100%
+
+                        @media (max-width: $breakpoint-small)
+                            max-width: 50%
+
+        .users
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            margin: -1.5rem
+
+            a
+                padding: 1.5rem
+
+                img
+                    width: 200px
+                    height: 100px
+
+                    @media (max-width: $breakpoint-small)
+                        width: 120px
+                        height: 60px

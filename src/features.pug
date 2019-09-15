@@ -1,0 +1,65 @@
+html
+    include partials/head.pug
+    +head('Features | Data Stewardship Wizard')
+    body
+        include partials/header.pug
+
+        .container.container-default.container-features
+            h2 Features
+
+            .feature
+                .description
+                    h3 Guidance
+                    p Our smart questionnaires will effortlessly guide you through the vast knowledge of data stewardship by asking you relevant <strong>questions</strong>, offering <strong>hints, multimedia contents, external resources</strong> and <strong>community help</strong>.
+                .image
+                    img(src="/static/features/guidance.png", srcset='/static/features/guidance.png 1x, /static/features/guidance@2x.png 2x')
+
+            .feature
+                .description
+                    h3 Integrations
+                    p Questionnaires can be <strong>connected to external sources</strong>. Apart from getting to the answer being fast and easy, it also becomes automatically FAIR. For example, DSW is currently connected to <a href="https://fairsharing.org" target="_blank">FAIRsharing</a> so you can enjoy their high-quality curated content.
+                .image
+                    img(src="/static/features/integrations.png", srcset='/static/features/integrations.png 1x, /static/features/integrations@2x.png 2x')
+
+            .feature
+                .description
+                    h3 FAIR Metrics
+                    p You can <strong>evaluate answers</strong> in each questionnaire to get an overview of how good you are doing in terms of <strong>FAIR metrics</strong>. Thus you are able to reconsider your decisions already in the planning phase to make your research more FAIR.
+                .image
+                    img(src="/static/features/fair-metrics.png", srcset='/static/features/fair-metrics.png 1x, /static/features/fair-metrics@2x.png 2x')
+
+            .feature
+                .description
+                    h3 Templates
+                    p Once you fill in the questionnaire, you can generate a <strong>data management plan</strong> using our growing selection of templates to satisfy the needs of different funders. You can also choose different formats like <strong>MS Word</strong>, <strong>PDF</strong> or even LaTeX.
+                .image
+                    img(src="/static/features/templates.png", srcset='/static/features/templates.png 1x, /static/features/templates@2x.png 2x')
+
+            .feature
+                .description
+                    h3 Machine-Actionable Export
+                    p You can generate not only human-readable document from the filled questionnaire but also <strong>machine-actionable formats</strong> like <strong>JSON</strong> (RDF coming in the near future). Thus it is easy to <strong>integrate</strong> the data from DSW to other systems.
+                .image
+                    img(src="/static/features/machine-actionable.png", srcset='/static/features/machine-actionable.png 1x, /static/features/machine-actionable@2x.png 2x')
+
+            .feature
+                .description
+                    h3 Knowledge Models
+                    p DSW is a living place, you can find various knowledge models stored in a shared <a href="https://registry.ds-wizard.org" target="_blank">public registry</a> and you can contribute by extending and creating your own, as well as give feedback and discuss with others.
+                .image
+                    img(src="/static/features/knowledge-models.png", srcset='/static/features/knowledge-models.png 1x, /static/features/knowledge-models@2x.png 2x')
+
+
+            .feature
+                .description
+                    h3 Knowledge Model Editor
+                    p The Knowledge model editor is a tool for building your own <strong>new knowledge models</strong> or <strong>extending the existing ones</strong> so that they can cover new areas of expertise or better fit your organization’s needs.
+                .image
+                    img(src="/static/features/km-editor.png", srcset='/static/features/km-editor.png 1x, /static/features/km-editor@2x.png 2x')
+
+            .learn-more
+                a.btn.btn-primary.btn-cta(href="http://docs.ds-wizard.org/en/latest/", target="_blank")
+                    img(src="/static/icons/graduation-cap.svg")
+                    span Learn more
+
+        include partials/footer.pug
