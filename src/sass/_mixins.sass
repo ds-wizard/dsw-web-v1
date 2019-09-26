@@ -1,0 +1,61 @@
+@import 'variables'
+
+
+
+// utilities
+
+@mixin border-radius($radius)
+    -webkit-border-radius: $radius
+    border-radius: $radius
+    background-clip: padding-box
+
+@mixin border-right-radius($radius)
+    -webkit-border-bottom-right-radius: $radius
+    border-bottom-right-radius: $radius
+    -webkit-border-top-right-radius: $radius
+    border-top-right-radius: $radius
+    background-clip: padding-box
+
+
+@mixin border-left-radius($radius)
+    -webkit-border-bottom-left-radius: $radius
+    border-bottom-left-radius: $radius
+    -webkit-border-top-left-radius: $radius
+    border-top-left-radius: $radius
+    background-clip: padding-box
+
+
+@mixin box-shadow($left, $top, $blur, $color, $inset: false)
+    @if $inset
+        -webkit-box-shadow:inset $left $top $blur $color
+        -moz-box-shadow:inset $left $top $blur $color
+        box-shadow:inset $left $top $blur $color
+    @else
+        -webkit-box-shadow: $left $top $blur $color
+        -moz-box-shadow: $left $top $blur $color
+        box-shadow: $left $top $blur $color
+
+
+@mixin transition($transition)
+    -moz-transition: $transition
+    -o-transition: $transition
+    -webkit-transition: $transition
+    transition: $transition
+
+
+
+// concrete mixins
+
+@mixin border-radius-default
+    @include border-radius($border-radius)
+
+
+@mixin box-shadow-hard
+    @include box-shadow(0, 10px, 25px, $color-hard-shadow)
+
+
+@mixin box-shadow-soft
+    @include box-shadow(0, 10px, 25px, $color-soft-shadow)
+
+@mixin transition-default($prop)
+    @include transition($prop 0.1s ease-in-out)

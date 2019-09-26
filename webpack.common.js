@@ -4,10 +4,12 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const pages = [
-    'index',
-    'privacy',
     'contact',
-    'media'
+    'features',
+    'get-started',
+    'index',
+    'media',
+    'privacy'
 ]
 
 module.exports = {

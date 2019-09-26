@@ -2,109 +2,50 @@ html
     include partials/head.pug
     +head('Data Stewardship Wizard')
     body
-        .header-landing
-            img.logo(src='static/logo-horizontal.svg')
-            .subtitle
-                p Smart Data Management Plans for FAIR Open Science
-                p For Serious Researchers and Data Stewards
-
+        include partials/header.pug
 
         .content
-            .container
-                h2 How to use the Data Stewardship Wizard
-                p We offer several options how to use the Data Stewardship Wizard, each suited for different use case.
-                .variants
-                    .variant.demo
-                        h3 Demo Instance
-                        .tagline For exploring the DSW features
-                        .description
-                            ul
-                                li Easy to sign up and use
-                                li A shared instance with other users
-                                li
-                                    strong Not for serious usage
-                        .pricing FREE
-                        .features
-                            h4 Available Features
-                            ul
-                                li Questionnaires &amp; DMPs
-                                li Knowledege Models Management
-                        .action
-                            a.bordered.secondary(href="https://demo.ds-wizard.org") See the Demo
+            .container.container-homepage
+                h1 Data Stewardship Wizard
+                .tagline Create Smart Data Management Plans<br>for FAIR Open Science
+                .get-started
+                    a.btn.btn-primary.btn-cta(href="/get-started.html")
+                        img(src="/static/icons/dsw.svg")
+                        span Get started
 
+                .app
+                    img(src="/static/app.png", srcset='/static/app.png 1x, /static/app@2x.png 2x')
 
-                    .variant.researchers
-                        h3 Researchers Instance
-                        .tagline For individual researchers
-                        .description
-                            ul
-                                li Easy to sign up and use
-                                li Ready to use Knowledge Models
-                                li Privacy and stability
-                        .pricing FREE
-                        .features
-                            h4 Available Features
-                            ul
-                                li Questionnaires &amp; DMPs
-                        .action
-                            a.bordered(href="https://researchers.ds-wizard.org") Sign Up
+                .section
+                    h2 DSW Workflow
 
-                    .variant.self-hosted
-                        h3 Self-hosted instance
-                        .tagline For organizations
-                        .description
-                            ul
-                                li All the DSW features available
-                                li Your own instance
-                                li You need to host and run the instance by yourself
-                        .pricing FREE
-                        .features
-                            h4 Available Features
-                            ul
-                                li Questionnaires &amp; DMPs
-                                li Knowledege Models Management
-                                li User Management &amp; Organization Settings
-                                li Features configuration &amp; visual style customizations
-                        .action
-                            a.bordered.secondary(href="https://docs.ds-wizard.org/en/latest/admin/installation.html") See the Docs
+                    .workflow
+                        .step
+                            .image
+                                img(src="/static/illustrations/setup_wizard.svg")
+                            h3 1. Fill in the smart questionnaire
 
-                    .variant.hosted-by-us
-                        h3 Instance hosted by us
-                        .tagline For organizations
-                        .description
-                            p We offer managing the DS Wizard instance for interesting projects that want to use it seriously but don’t want to run it by themselves.
-                        .pricing FREE *
-                        .features
-                            h4 Available Features
-                            ul
-                                li Questionnaires &amp; DMPs
-                                li Knowledege Models Management
-                                li User Management &amp; Organization Settings
-                                li Features configuration &amp; visual style customizations
-                        .action
-                            p Contact us as at <a href="mailto:info@ds-wizard.org">info@ds-wizard.org</a>.
-                p
-                    small * non-standard requirements may be subject to a fee
+                        .step
+                            .image
+                                img(src="/static/illustrations/upload.svg")
+                            h3 2. Generate the Data Management Plan
 
-            .container.content-row.flipped
-                .text
-                    h2 Easily create comprehensive data management plans
-                    p Our smart questionnaire will effortlessly guide you through the vast knowledge of data stewardship by asking you <strong>questions</strong>, offering <strong>hints</strong>, <strong>multimedia contents</strong>, <strong>external resources</strong> and <strong>community help</strong>.
-                    p
-                      em This is data stewardship done seriously for the project success, not just to make your funder happy!
-                    a.bordered.primary(href='https://demo.ds-wizard.org/questionnaire') Try Demo
-                img(src='static/screenshot-questionnaire.png', srcset='static/screenshot-questionnaire.png 1x, static/screenshot-questionnaire@2x.png 2x')
-            .container.content-row
-                .text
-                    h2 Extend the knowledge
-                    p DS Wizard is a living place, you can <strong>contribute to its knowledge base</strong> by giving feedback, discussing with others and adding resources and even new areas of expertise.
-                img(src='static/screenshot-editor.png', srcset='static/screenshot-editor.png 1x, static/screenshot-editor@2x.png 2x')
-            .container.content-row.flipped
-                .text
-                    h2 Learn more!
-                    p Interested in the Data Stewardship Wizard? Want to learn more about the project?
-                    a.bordered.primary(href='https://docs.ds-wizard.org', target='_blank') Learn more
-                img(src='static/screenshot-docs.png', srcset='static/screenshot-docs.png 1x, static/screenshot-docs@2x.png 2x')
-        include partials/subscribe-form.pug
+                        .step
+                            .image
+                                img(src="/static/illustrations/printing_invoices.svg")
+                            h3 3. Get funded
+
+                .section
+                    h2 Who is using DSW
+
+                    .users
+                        a(href="https://www.go-fair.org", target="_blank")
+                            img(src="/static/logo/go-fair.png", alt="GOFAIR")
+                        a(href="https://www.scilifelab.se/data/", target="_blank")
+                            img(src="/static/logo/scilifelab.png", alt="SciLifeLab Data Centre")
+                        a(href="https://osc.jyu.fi/en", target="_blank")
+                            img(src="/static/logo/uoj.png",  alt="Open Science Centre of University of Jyväskylä")
+                        a(href="https://www.inesc-id.pt", target="_blank")
+                            img(src="/static/logo/inesc-id.png", alt="INESC-ID")
 
         include partials/footer.pug

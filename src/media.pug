@@ -4,15 +4,20 @@ html
     body
         include partials/header.pug
 
-        .content
-            .row
-                h2 Media
+        .container.container-default.container-media
+            h2 Media
 
-                p Do you want to write about, present or somehow mention the Data Stewardship Wizard? We are happy about it and to make it easier for you, we've prepared a Media Kit with materials (logo variants, screenshots, diagrams, etc.) that you can download and use!
+            .wrapper
+                .content
+                    p Do you want to write about, present or somehow mention the Data Stewardship Wizard? We are happy about it and to make it easier for you, we've prepared a <strong>Media Kit</strong> with materials (logo variants, screenshots, diagrams, etc.) that you can download and use!
 
-                p.download
-                    a.bordered.primary(href="/static/dsw-media-kit.zip") Download Media Kit
+                    p.download
+                        a.btn.btn-primary.btn-cta(href="/static/dsw-media-kit.zip")
+                            img(src="/static/icons/download.svg")
+                            span Download Media Kit
 
-                p When using the logo, please don't change the colours, use one of the variants available in the Media Kit. Give it some space, at least the width of letter D around the logo (images in the Media Kit have enough padding for that). Also, use the variant with the full text "DATA STEWARDSHIP WIZARD" only if it's well readable, otherwise use another one.
+                    p When using the logo, please don't change the colours, use one of the variants available in the Media Kit. Give it some space, at least the width of letter D around the logo (images in the Media Kit have enough padding for that). Also, use the variant with the full text "DATA STEWARDSHIP WIZARD" only if it's well readable, otherwise use another one.
+                .illustration
+                    img(src="/static/illustrations/folder.svg")
 
         include partials/footer.pug
