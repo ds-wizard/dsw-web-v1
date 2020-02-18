@@ -2,6 +2,8 @@ const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 const pages = [
     'contact',
@@ -9,12 +11,14 @@ const pages = [
     'get-started',
     'index',
     'media',
-    'privacy'
+    'privacy',
+    'resources',
 ]
 
 module.exports = {
     entry: [
-        './src/main.js', './src/sass/main.sass'
+        './src/main.js',
+        './src/sass/main.sass'
     ],
 
     output: {
@@ -30,11 +34,12 @@ module.exports = {
                 loader: 'pug-loader'
             },
             {
-                test: /\.sass$/,
-                loader: ['css-hot-loader'].concat(ExtractTextPlugin.extract(
-                    ['css-loader?{discardComments:{removeAll:true},minimize:true,url:false}', 'sass-loader']
-                ))
-            }
+                test: /\.(sass|scss|css)$/,
+                use: [{ loader: MiniCssExtractPlugin.loader },
+                    'css-loader',
+                    'sass-loader'
+                ]
+            },
         ]
     },
 
@@ -47,6 +52,15 @@ module.exports = {
             filename: 'main.css',
             allChunks: true
         }),
+        new MiniCssExtractPlugin({
+            filename: 'main.css',
+            allChunks: true
+        }),
+        new OptimizeCssAssetsPlugin({
+            cssProcessorPluginOptions: {
+                preset: ['default', { discardComments: { removeAll: true } }]
+            }
+        }),
         new CopyWebpackPlugin([{
             from: 'src/static',
             to: 'static'
@@ -54,5 +68,11 @@ module.exports = {
             'from': 'src/favicon.ico',
             'to': 'favicon.ico'
         }])
-    ])
+    ]),
+
+    devServer: {
+        inline: true,
+        stats: { colors: true },
+        historyApiFallback: { disableDotRule: true },
+    }
 }
