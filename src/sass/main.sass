@@ -330,21 +330,26 @@ p
                             max-width: 50%
 
         .users
-            display: flex
-            align-items: center
-            flex-wrap: wrap
-            margin: -1.5rem
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr 1fr
+            grid-column-gap: 2.5rem
+            grid-row-gap: 2.5rem
 
+            @media (max-width: $breakpoint-small)
+                grid-template-columns: 1fr 1fr
+                
             a
-                padding: 1.5rem
+                height: 100px
+                display: flex
+                justify-content: center
+                align-items: center
+
+                @media (max-width: $breakpoint-small)
+                    height: 60px
 
                 img
-                    width: 200px
-                    height: 100px
-
-                    @media (max-width: $breakpoint-small)
-                        width: 120px
-                        height: 60px
+                    max-width: 100%
+                    max-height: 100%
 
 
 .container-resources
