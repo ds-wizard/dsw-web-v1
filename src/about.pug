@@ -1,0 +1,93 @@
+html
+    include partials/head.pug
+    +head('About')
+    body
+        include partials/header.pug
+
+        .container.container-full.container-about
+            h2 About
+            
+            .about
+                .about-text
+                    p <strong>We bring together data stewards and researchers</strong> to efficiently compose data management plans (DMPs) for their research projects.
+                    p Data Stewards capture and combine their <strong>knowledge and expertise with respect</strong> to the specific needs of a domain or an organisation. Researchers are <strong>truly guided</strong> through composing a DMP which can be then exported using selected template and format, <strong>including machine-actionable</strong>.
+                    p The benefit lies not only in having a nowadays often <strong>obligatory DMP for funders</strong> but mainly learning how to handle data correctly, make them <strong>FAIR</strong>, maintain them well during the project, and curate them <strong>long-term</strong>.
+                .about-image
+                    img(src="/static/dsw-logo-full-color-transparent.svg")
+            
+            h3 The DSW Core Team
+
+            .team
+                .team-row
+                    .member
+                        img(src="/static/team/robert.jpeg")
+                        .member-info
+                            strong Robert Pergl
+                            span Project Coordinator
+                            .links
+                                a(href="https://www.linkedin.com/in/robertpergl/", target="_blank")
+                                    img(src="/static/icons/linkedin.svg", alt="LinkedIn")
+                                a(href="https://github.com/roper79", target="_blank")
+                                    img(src="/static/icons/github.svg", alt="GitHub")
+                                a(href="https://twitter.com/RobertPergl", target="_blank")
+                                    img(src="/static/icons/twitter.svg", alt="Twitter")
+                    .member
+                        img(src="/static/team/rob.jpeg")
+                        .member-info
+                            strong Rob Hooft
+                            span DS Knowledge Expert
+                            .links
+                                a(href="https://www.linkedin.com/in/robhooft/", target="_blank")
+                                    img(src="/static/icons/linkedin.svg", alt="LinkedIn")
+                                a(href="https://github.com/rwwh", target="_blank")
+                                    img(src="/static/icons/github.svg", alt="GitHub")
+                                a(href="https://twitter.com/rwwh", target="_blank")
+                                    img(src="/static/icons/twitter.svg", alt="Twitter")
+                .team-row
+                    .member
+                        img(src="/static/team/vojtech.jpeg")
+                        .member-info
+                            strong Vojtěch Knaisl
+                            span Backend Developer
+                            .links
+                                a(href="https://www.linkedin.com/in/vojtech-knaisl/", target="_blank")
+                                    img(src="/static/icons/linkedin.svg", alt="LinkedIn")
+                                a(href="https://github.com/vknaisl", target="_blank")
+                                    img(src="/static/icons/github.svg", alt="GitHub")
+                                a(href="https://twitter.com/VojtechKnaisl", target="_blank")
+                                    img(src="/static/icons/twitter.svg", alt="Twitter")
+                    .member
+                        img(src="/static/team/jan.jpeg")
+                        .member-info
+                            strong Jan Slifka
+                            span Frontend Developer
+                            .links
+                                a(href="https://www.linkedin.com/in/jan-slifka/", target="_blank")
+                                    img(src="/static/icons/linkedin.svg", alt="LinkedIn")
+                                a(href="https://github.com/janslifka", target="_blank")
+                                    img(src="/static/icons/github.svg", alt="GitHub")
+                                a(href="https://twitter.com/janslifka", target="_blank")
+                                    img(src="/static/icons/twitter.svg", alt="Twitter")
+                    .member
+                        img(src="/static/team/marek.jpeg")
+                        .member-info
+                            strong Marek Suchánek
+                            span Leonardo da Vinci
+                            .links
+                                a(href="https://www.linkedin.com/in/mareksuchanek/", target="_blank")
+                                    img(src="/static/icons/linkedin.svg", alt="LinkedIn")
+                                a(href="https://github.com/MarekSuchanek", target="_blank")
+                                    img(src="/static/icons/github.svg", alt="GitHub")
+                                a(href="https://twitter.com/MarekSuchanek_", target="_blank")
+                                    img(src="/static/icons/twitter.svg", alt="Twitter")
+                .team-row
+                    .member
+                        img(src="/static/team/jiri.jpeg")
+                        .member-info
+                            strong Jiří Vondrášek
+                            span Business and Strategic Advisory
+                            .links
+                                a(href="https://www.linkedin.com/in/jiri-vondrasek-a065235/", target="_blank")
+                                    img(src="/static/icons/linkedin.svg", alt="LinkedIn")
+                    
+        include partials/footer.pug

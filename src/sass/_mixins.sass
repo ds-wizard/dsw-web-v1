@@ -57,5 +57,8 @@
 @mixin box-shadow-soft
     @include box-shadow(0, 10px, 25px, $color-soft-shadow)
 
+@mixin box-shadow-extra-soft
+    @include box-shadow(0, 5px, 10px, $color-extra-soft-shadow)
+
 @mixin transition-default($prop)
     @include transition($prop 0.1s ease-in-out)
