@@ -14,6 +14,7 @@ const pages = [
     'media',
     'privacy',
     'resources',
+    'scilifelab-dsw-story',
 ]
 
 module.exports = {
@@ -45,7 +46,7 @@ module.exports = {
     },
 
     plugins: pages.map(page => new HtmlWebpackPlugin({
-        template: `src/${page}.pug`,
+        template: `src/pages/${page}.pug`,
         filename: `${page}.html`,
         chunks: ['global', 'index'],
     })).concat([

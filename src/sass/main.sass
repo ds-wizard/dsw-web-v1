@@ -30,15 +30,25 @@ h2
 
 a
     color: $color-primary
+    text-decoration: none
 
     &:hover
         color: $color-primary-hover
+        text-decoration: underline
 
 li
     font-size: $font-size-text
 
 p
     text-align: justify
+    line-height: 1.9
+    margin-bottom: 2rem
+
+blockquote
+    text-align: justify
+    font-style: italic
+    margin: 1rem
+    line-height: 1.9
 
 .container
     margin: auto
@@ -80,6 +90,7 @@ p
 
     &:hover
         color: $white
+        text-decoration: none
 
     &-primary
         background: $color-primary
@@ -290,6 +301,18 @@ p
             width: 100%
 
     .section
+        &-story
+            @include box-shadow-extra-soft
+            @include border-radius-default
+            padding: 2rem
+            // max-width: $width-default
+            margin: auto
+            margin-bottom: 8rem
+
+            h2
+                margin-top: 0
+
+
         .workflow
             display: flex
             justify-content: space-between

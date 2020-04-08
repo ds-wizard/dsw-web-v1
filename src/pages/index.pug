@@ -1,8 +1,8 @@
 html
-    include partials/head.pug
+    include ../partials/head.pug
     +head('Data Stewardship Wizard')
     body
-        include partials/header.pug
+        include ../partials/header.pug
 
         .content
             .container.container-homepage
@@ -15,6 +15,14 @@ html
 
                 .app
                     img(src="/static/app.png", srcset='/static/app.png 1x, /static/app@2x.png 2x')
+
+                .section.section-story
+                    h2 The SciLifeLab DS Wizard Story
+
+                    blockquote Our story started in 2018 with the development of a data management plan (DMP) template targeted at projects generating NGS data at SciLifeLab. We wanted to provide this template to a wider audience and hence needed an online resource. Through the ELIXIR network we knew about the Data Stewardship Wizard, and decided to try it out.
+
+                    a(href='/scilifelab-dsw-story.html') Read the full story &rarr;
+
 
                 .section
                     h2 DSW Workflow
@@ -59,4 +67,4 @@ html
                             img(src="/static/logo/university_of_oslo_logo.png", alt="University of Oslo")
                         a(href="https://en.uit.no/", target="_blank")
                             img(src="/static/logo/University_of_Tromso_logo.svg", alt="University of Tromsø")
-        include partials/footer.pug
+        include ../partials/footer.pug
