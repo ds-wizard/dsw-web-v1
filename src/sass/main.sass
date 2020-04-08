@@ -43,12 +43,19 @@ p
     text-align: justify
     line-height: 1.9
     margin-bottom: 2rem
+    
+    @media (max-width: $breakpoint-small)
+        text-align: left
 
 blockquote
     text-align: justify
     font-style: italic
     margin: 1rem
     line-height: 1.9
+
+    @media (max-width: $breakpoint-small)
+        margin: 0
+        text-align: left
 
 .container
     margin: auto

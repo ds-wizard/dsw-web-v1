@@ -7,26 +7,47 @@
     color: $color-body
     margin-top: 8rem
     padding: 3rem 1rem
-    display: flex
-    justify-content: space-between
 
-    @media (max-width: $breakpoint-medium)
-        display: block
 
-        .footer-section
-            margin-bottom: 4rem
+    .footer-row
+        max-width: $width-default
+        margin: auto
+        display: flex
+        justify-content: space-between
 
-            &.team
-                padding: 0 !important
+        &:not(:first-child)
+            margin-top: 2.5rem
+
+        &-separated
+            border-top: 1px solid $color-border-light
+            padding-top: 2.5rem
+
+        @media (max-width: $breakpoint-medium)
+            display: block
+
+            .footer-section:not(:last-child)
+                margin-bottom: 3rem
+
+                // &.team
+                //     padding: 0 !important
 
     .footer-section
-        strong, label
-            font-weight: bold
+        &-full
+            width: 100%
+
+        &.team
+            margin: auto
+
+        strong
             display: block
             margin-bottom: .5rem
 
+        label
+            font-weight: bold
+            display: block
+
         a
-            color: $color-body
+            color: $color-text-light
 
             &:hover
                 color: $color-primary
@@ -37,12 +58,10 @@
 
             li
                 list-style-type: none
+                line-height: 1.9
 
                 a
                     white-space: nowrap
-
-        &.team
-            padding: 0 2rem
 
         .icon-list
             li
@@ -63,19 +82,35 @@
             &.follow
                 li
                     margin-right: 0.5rem
+                    margin-bottom: 0
 
                     a
                         img
                             height: 1.75rem
 
 #mc_embed_signup
-    margin-bottom: 2rem
+    width: 100%
 
-    @media (max-width: $breakpoint-medium)
-        margin-bottom: 4rem
+    form
+        display: flex
+        width: 100%
+        align-items: center
+        justify-content: space-between
+
+
+        @media (max-width: $breakpoint-medium)
+            display: block
+
+            .label-group
+                margin-bottom: 1rem
+
+
+    .label-group
+        padding-right: 2rem
 
     .form-group
-        white-space: nowrap
+        flex-grow: 1
+        display: flex
 
         input
             font-family: $font-default !important
@@ -94,6 +129,7 @@
         input[type="email"]
             @include border-left-radius($border-radius)
             min-width: 200px
+            flex-grow: 1
 
 
         input[type="submit"]

@@ -1,58 +1,76 @@
 .footer
-    .footer-section
-        strong About
-        ul
-            li
-                a(href="/contact.html") Contact
-            li
-                a(href="/privacy.html") Personal Data Protection
-            li
-                a(href="https://docs.ds-wizard.org", target="_blank") Documentation
-            li
-                a(href="/media.html", target="_blank") Media Kit
-            li
-                a(href="https://us18.campaign-archive.com/home/?u=84367d74c182d3f7399b45374&id=6359974798", target="_blank") Newsletter Archive
-    .footer-section.team
-        strong DSW was created in cooperation of
-        ul.icon-list
-            li
-                a(href='http://elixir-czech.cz/', target='_blank')
-                    img(src='static/team-elixir-cz.png', alt='Elixir Czech Republic', title='Elixir Czech Republic')
-            li
-                a(href='https://www.uochb.cz/', target='_blank')
-                    img(src='static/team-iocb.png', alt='Institute of Organic Chemistry and Biochemistry of the CAS', title='Institute of Organic Chemistry and Biochemistry of the CAS')
-            li
-                a(href='http://fit.cvut.cz/en', target='_blank')
-                    img(src='static/team-fit-ctu.png', alt='Faculty of Information Technology', title='Faculty of Information Technology')
-            li
-                a(href='http://ccmi.fit.cvut.cz/en', target='_blank')
-                    img(src='static/team-ccmi.png', alt='Centre for Conceptual Modelling and Implementation', title='Centre for Conceptual Modelling and Implementation')
-            li
-                a(href='http://www.dtls.nl/elixir-nl/elixir-nl-2/', target='_blank')
-                    img(src='static/team-elixir-nl.png', alt='Elixir Netherlands', title='Elixir Netherlands')
-            li
-                a(href='http://www.dtls.nl/', target='_blank')
-                    img(src='static/team-dtl.png', alt='Dutch Techcentre for Life Sciences', title='Dutch Techcentre for Life Sciences')
-    .footer-section
-        #mc_embed_signup
-            form#mc-embedded-subscribe-form.validate(action='https://ds-wizard.us18.list-manage.com/subscribe/post?u=84367d74c182d3f7399b45374&id=6359974798', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
-                #mc_embed_signup_scroll
-                label(for='mce-EMAIL') Subscribe to our Mailing List
-                // real people should not fill this in and expect good things - do not remove this or risk form bot signups
-                div(style='position: absolute; left: -5000px;', aria-hidden='true')
-                    input(type='text', name='b_84367d74c182d3f7399b45374_6359974798', tabindex='-1', value='')
-                .form-group
-                    input#mce-EMAIL.email(type='email', value='', name='EMAIL', placeholder='Your email address', required='')
-                    input#mc-embedded-subscribe.button(type='submit', value='Subscribe', name='subscribe')
+    .footer-row
+        .footer-section.footer-section-full
+            #mc_embed_signup
+                form#mc-embedded-subscribe-form.validate(action='https://ds-wizard.us18.list-manage.com/subscribe/post?u=84367d74c182d3f7399b45374&id=6359974798', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                    .label-group
+                        label(for='mce-EMAIL') Subscribe to our Mailing List
+                        span And get the latest updates about the Data Stewardship Wizard
+                    // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                    div(style='position: absolute; left: -5000px;', aria-hidden='true')
+                        input(type='text', name='b_84367d74c182d3f7399b45374_6359974798', tabindex='-1', value='')
+                    .form-group
+                        input#mce-EMAIL.email(type='email', value='', name='EMAIL', placeholder='Your email address', required='')
+                        input#mc-embedded-subscribe.button(type='submit', value='Subscribe', name='subscribe')
 
-        strong Follow DSW
-        ul.icon-list.follow
-            li
-                a(href='https://twitter.com/dswizard_org', target='_blank')
-                    img(src='static/follow-twitter.png', alt='Twitter', title='Twitter')
-            li
-                a(href='https://github.com/ds-wizard', target='_blank')
-                    img(src='static/follow-github.png', alt='GitHub', title='GitHub')
-            li
-                a(href='https://hub.docker.com/u/datastewardshipwizard', target='_blank')
-                    img(src='static/follow-docker.png', alt='Docker', title='Docker')
+    .footer-row.footer-row-separated
+        .footer-section
+            strong General
+            ul
+                li
+                    a(href="/about.html") About
+                li
+                    a(href="/contact.html") Contact
+                li
+                    a(href="/privacy.html") Privacy
+                li
+                    a(href="/media.html", target="_blank") Media Kit
+                  
+        .footer-section
+            strong Learn More
+            ul
+                li
+                    a(href="/resources.html") Resources
+                li
+                    a(href="https://docs.ds-wizard.org", target="_blank") Documentation
+                li
+                    a(href="https://us18.campaign-archive.com/home/?u=84367d74c182d3f7399b45374&id=6359974798", target="_blank") Newsletter Archive
+        
+        .footer-section
+
+        .footer-section
+
+            strong Follow DSW
+            ul.icon-list.follow
+                li
+                    a(href='https://twitter.com/dswizard_org', target='_blank')
+                        img(src='static/follow-twitter.png', alt='Twitter', title='Twitter')
+                li
+                    a(href='https://github.com/ds-wizard', target='_blank')
+                        img(src='static/follow-github.png', alt='GitHub', title='GitHub')
+                li
+                    a(href='https://hub.docker.com/u/datastewardshipwizard', target='_blank')
+                        img(src='static/follow-docker.png', alt='Docker', title='Docker')
+
+    .footer-row.footer-row-separated
+        .footer-section.team
+            strong DSW was created in cooperation of
+            ul.icon-list
+                li
+                    a(href='http://elixir-czech.cz/', target='_blank')
+                        img(src='static/team-elixir-cz.png', alt='Elixir Czech Republic', title='Elixir Czech Republic')
+                li
+                    a(href='https://www.uochb.cz/', target='_blank')
+                        img(src='static/team-iocb.png', alt='Institute of Organic Chemistry and Biochemistry of the CAS', title='Institute of Organic Chemistry and Biochemistry of the CAS')
+                li
+                    a(href='http://fit.cvut.cz/en', target='_blank')
+                        img(src='static/team-fit-ctu.png', alt='Faculty of Information Technology', title='Faculty of Information Technology')
+                li
+                    a(href='http://ccmi.fit.cvut.cz/en', target='_blank')
+                        img(src='static/team-ccmi.png', alt='Centre for Conceptual Modelling and Implementation', title='Centre for Conceptual Modelling and Implementation')
+                li
+                    a(href='http://www.dtls.nl/elixir-nl/elixir-nl-2/', target='_blank')
+                        img(src='static/team-elixir-nl.png', alt='Elixir Netherlands', title='Elixir Netherlands')
+                li
+                    a(href='http://www.dtls.nl/', target='_blank')
+                        img(src='static/team-dtl.png', alt='Dutch Techcentre for Life Sciences', title='Dutch Techcentre for Life Sciences')
