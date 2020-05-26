@@ -15,6 +15,7 @@ const pages = [
     'privacy',
     'resources',
     'scilifelab-dsw-story',
+    'terms',
 ]
 
 module.exports = {
