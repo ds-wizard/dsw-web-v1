@@ -460,3 +460,33 @@ blockquote
                         &:hover
                             img
                                 opacity: 0.8
+
+.container-services
+    ul
+        li
+            margin-bottom: 1rem
+
+    .services
+        display: flex
+        justify-content: space-between
+
+        @media (max-width: $breakpoint-small)
+            display: block
+
+        .description
+            width: 50%
+
+            @media (max-width: $breakpoint-small)
+                width: 100%
+
+            h3
+                font-size: $font-size-large
+
+        .image
+            width: 40%
+
+            @media (max-width: $breakpoint-small)
+                width: 100%
+
+            img
+                max-width: 100%
