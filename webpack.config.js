@@ -8,6 +8,7 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const pages = [
     'about',
     'contact',
+    'elixir-norway-dsw-story',
     'features',
     'get-started',
     'index',

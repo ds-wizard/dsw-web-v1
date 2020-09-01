@@ -1,0 +1,36 @@
+html
+    include ../partials/head.pug
+    +head('The SciLifeLab DS Wizard Story | Data Stewardship Wizard')
+    body
+        include ../partials/header.pug
+
+        .container.container-default
+            h2 The ELIXIR Norway DS Wizard Story
+
+            p Norwegian funders require that research groups submit data management plans (DMPs) upon signing the contract for their research projects. Generating a DMP has been regarded by many researchers as a mere administrative burden, rather than a tool to revise their habits and support their projects.
+
+            p ELIXIR Norway, in collaboration with the Centre for Digital Life Norway, has explored methods to support Norwegian researchers in data management planning for several years. After we got to know the Data Steward Wizard (DSW)  in 2018, we started to use it fully in production in 2019 to enable assisted data management planning (DMP) for Life-Scientists across Norway. We operate several instances for our own testing and use one instance hosted by ELIXIR-CZ for us for production.
+
+            p The DSW provides us with the unique opportunity to facilitate both the generation of DMPs by the research community and at the same time to increase awareness for research data management. We have adapted the Data Steward Wizard Life-Science knowledge model (KM) for users in Norway, and included additional guidance on Norwegian infrastructures, requirements for sensitive data, local policies and regulations. This knowledge model has been an eye-opener to research projects in all stages and simultaneously guides the users to practical solutions for all aspects of data handling, including allocating resources for the necessary data analysis and storage infrastructure.
+
+            p We were very happy when DSW reached full compliance with the Science Europe guidelines through work performed at the Biohackathon 2019, as these guidelines are used by the major funders in Norway.
+
+            p The DSW has been very valuable for several of our DM-training events across Norwegian Universities. This is also facilitated by the fact that users can authenticate with their national FEIDE credentials. 
+
+            p Our users report in person and through the inbuilt feedback mechanism that these aspects have helped them to think in new terms about research data management and to directly address practical challenges. The hierarchical format of the questionnaires and the integration of key resources like FAIRsharing and bio.tools into DSW have also proved very helpful for our users.
+
+            p DSW is a cornerstone for us in our new BioMedData project in which we will, together with the other major Norwegian Life-Science research infrastructures, develop routines for FAIR end-to-end data management routines. In the near future we hope to make use of the machine actionable DMP features to provide a seamless experience for researchers who also use resources from EOSC-Nordic. We are also exploring if the DSW API can be used for direct interaction with our storage platform NeLS.
+            
+            p
+                | <strong>Korbinian Bösl</strong>, ELIXIR-Norway, Centre for Digital Life Norway, University of Bergen
+                br
+                | <strong>Erik Hjerde</strong>, ELIXIR-Norway, University of Tromsø
+                br
+                | <strong>Ståle Nygård</strong>, Training coordinator ELIXIR-Norway, University of Oslo
+                br
+                | <strong>Thu-Hien To</strong>, ELIXIR-Norway, Norwegian University of Life Sciences
+                br
+                | <strong>Kjersti Rise</strong>, ELIXIR-Norway, Norwegian University of Science and Technology
+
+
+        include ../partials/footer.pug

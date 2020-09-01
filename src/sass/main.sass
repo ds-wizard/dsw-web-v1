@@ -309,15 +309,30 @@ blockquote
 
     .section
         &-story
-            @include box-shadow-extra-soft
-            @include border-radius-default
-            padding: 2rem
-            // max-width: $width-default
             margin: auto
             margin-bottom: 8rem
+            display: grid
+            grid-template-columns: 1fr 1fr
+            column-gap: 2rem
 
-            h2
-                margin-top: 0
+            @media (max-width: $breakpoint-medium)
+                grid-template-columns: 1fr
+
+            .story
+                @include box-shadow-extra-soft
+                @include border-radius-default
+                padding: 2rem
+                display: flex
+                flex-direction: column
+
+                @media (max-width: $breakpoint-medium)
+                    margin-bottom: 2rem
+
+                h2
+                    margin-top: 0
+
+                blockquote
+                    flex-grow: 1
 
 
         .workflow
