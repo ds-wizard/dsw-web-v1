@@ -324,15 +324,23 @@ blockquote
                 padding: 2rem
                 display: flex
                 flex-direction: column
-
-                @media (max-width: $breakpoint-medium)
-                    margin-bottom: 2rem
+                margin-bottom: 2rem
 
                 h2
                     margin-top: 0
+                    margin-bottom: 0
 
                 blockquote
                     flex-grow: 1
+                    margin: 2rem 1rem
+
+                &.your
+                    box-shadow: none
+                    text-align: center
+                    justify-content: center
+
+                    p
+                        text-align: center
 
 
         .workflow
