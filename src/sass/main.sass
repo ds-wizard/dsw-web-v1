@@ -158,9 +158,6 @@ blockquote
             display: block
             margin-bottom: 5rem
 
-        // &:nth-child(even)
-            // flex-direction: row-reverse
-
         .description
             width: 50%
 
@@ -520,3 +517,124 @@ blockquote
 
             img
                 max-width: 100%
+
+$feature-width: 200px
+$feature-width-small: 100px
+$tool-width: 130px
+$tool-width-small: 110px
+
+.container-comparison
+    .comparison-table-wrapper
+        position: relative
+        overflow: auto
+
+    .comparison-table
+        border-collapse: collapse
+        min-width: 100%
+        margin: 0.5rem 0
+
+        td
+            padding: 1.5rem 0
+
+        td, th
+            text-align: center
+        
+        th
+            vertical-align: middle
+            min-width: $tool-width
+            max-width: $tool-width
+            background: $white
+
+            &.dsw
+                img
+                    max-width: 60%
+
+            small
+                display: block
+
+            @media (max-width: $breakpoint-small)
+                min-width: $tool-width-small
+                max-width: $tool-width-small
+
+        tbody
+            tr
+                &:nth-child(odd)
+                    background: $color-background-light
+
+                    .sticky
+                        background: $color-background-light
+
+                &:nth-child(even)
+                    background: $white
+
+                    .sticky
+                        background: $white
+
+        .feature
+            text-align: left
+            left: 0
+            min-width: $feature-width
+            max-width: $feature-width
+            padding-left: 1.5rem
+            box-sizing: border-box
+
+            @media (max-width: $breakpoint-small)
+                min-width: $feature-width-small
+                max-width: $feature-width-small
+                padding-left: 1rem
+                font-size: smaller
+
+        .dsw
+            left: $feature-width
+
+            &::after
+                content: ' '
+                color: blue
+                position: absolute
+                left: 0
+                top: 0
+                right: 0
+                bottom: 0
+                @include box-shadow-extra-soft
+
+            @media (max-width: $breakpoint-small)
+                left: $feature-width-small
+                
+        .sticky
+            position: -webkit-sticky
+            position: sticky
+
+        td
+            .yes
+                border-radius: 100%
+                background: $green url(/static/icons/check-inverse.svg) center center no-repeat
+                background-size: 50% 50%
+                width: 1.5rem
+                height: 1.5rem
+                margin: auto
+            
+            .no
+                border-radius: 100%
+                background: $red url(/static/icons/times-inverse.svg) center center no-repeat
+                background-size: 50% 50%
+                width: 1.5rem
+                height: 1.5rem
+                margin: auto
+
+            .limited
+                font-size: smaller
+                color: $yellow
+                font-weight: bold
+
+            .unknown
+                font-size: smaller
+                color: $color-text-light
+                font-weight: bold  
+    
+    .info 
+        margin-bottom: 4rem
+        font-style: italic
+
+    .feature
+        margin-bottom: 5rem
+        max-width: 50rem
