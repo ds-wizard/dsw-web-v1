@@ -8,10 +8,10 @@ html
             .container.container-homepage
                 h1 Data Stewardship Wizard
                 .tagline Create Smart Data Management Plans<br>for FAIR Open Science
-                .get-started
-                    a.btn.btn-primary.btn-cta(href="/get-started.html")
-                        img(src="/static/icons/dsw.svg")
-                        span Get started
+                .action-row
+                    a.btn.btn-primary.btn-cta#watch-video(href="/get-started.html")
+                        img(src="/static/icons/play.svg")
+                        span Watch video
 
                 .app
                     img(src="/static/app.png", srcset='/static/app.png 1x, /static/app@2x.png 2x')
@@ -63,7 +63,7 @@ html
                     .intro
                         p We highly appreciate any form of feedback and support from the community. You or your organisation can support DSW development easily using #[a(href="https://github.com/sponsors/ds-wizard", target="_blank") GitHub Sponsors]. We are also ready to provide you our #[a(href="/services.html", target="_blank") professional services] if you have specific requirements or feature requests matching your needs.
 
-                    .get-started
+                    .action-row
                         a.btn.btn-primary.btn-cta(href="https://github.com/sponsors/ds-wizard", target="_blank")
                             img(src="/static/icons/sponsor.svg")
                             span Sponsor DSW @ GitHub
@@ -104,4 +104,9 @@ html
                             img(src="/static/logo/ulisboa.png", alt="Universidade de Lisboa")
 
                     .users
+
+            .video
+                a.video-close(href="#")
+                    img(src="/static/icons/times-inverted.svg")
+                .video-content
         include ../partials/footer.pug
