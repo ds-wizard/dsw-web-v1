@@ -29,6 +29,15 @@ h2
     @media (max-width: $breakpoint-small)
         font-size: $font-size-large
 
+h2, h3
+    padding-top: $header-height + $scroll-snap-margin
+    margin-top: -($header-height + $scroll-snap-margin)
+
+    @media (max-width: $breakpoint-small)
+        padding-top: $header-height-mobile + $scroll-snap-margin
+        margin-top: -($header-height-mobile + $scroll-snap-margin)
+        
+
 a
     color: $color-primary
     text-decoration: none
