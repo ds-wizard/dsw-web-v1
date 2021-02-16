@@ -29,7 +29,7 @@ h2
     @media (max-width: $breakpoint-small)
         font-size: $font-size-large
 
-h2, h3
+.anchor
     padding-top: $header-height + $scroll-snap-margin
     margin-top: -($header-height + $scroll-snap-margin)
 
@@ -318,9 +318,9 @@ blockquote
             width: 100%
 
     .section
+        margin-bottom: 8rem
+
         &-story
-            margin: auto
-            margin-bottom: 8rem
             display: grid
             grid-template-columns: 1fr 1fr
             column-gap: 2rem
@@ -356,7 +356,6 @@ blockquote
         .workflow
             display: flex
             justify-content: space-between
-            margin-bottom: 8rem
 
             @media (max-width: $breakpoint-small)
                 display: block
@@ -417,20 +416,17 @@ blockquote
 
 .container-resources
     ul
+        margin-bottom: 3rem
+
         li
             margin-bottom: 1rem
 
-    ul + h3
-        margin-top: 3rem
-
 
 .container-about
-    h3
-        margin-top: 4rem
-
     .about
         display: flex
         align-items: center
+        margin-bottom: 4rem
 
         &-text
             flex: 1
@@ -445,6 +441,8 @@ blockquote
                 margin-top: -50px
 
     .team
+        margin-bottom: 4rem
+
         .team-row
             display: flex
             margin-bottom: 2rem
