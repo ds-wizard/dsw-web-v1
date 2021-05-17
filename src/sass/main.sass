@@ -352,6 +352,28 @@ blockquote
                     p
                         text-align: center
 
+        &-acknowledgements
+            .block
+                display: flex
+                justify-content: space-between
+                align-items: center
+                margin-bottom: 4rem
+
+                p
+                    margin-bottom: 1rem
+
+                img
+                    max-width: 500px
+                    margin-left: 3rem
+
+
+                @media (max-width: $breakpoint-medium)
+                    display: block
+
+                    img
+                        display: block
+                        margin: auto
+                        max-width: 100%
 
         .workflow
             display: flex
@@ -390,7 +412,7 @@ blockquote
 
                         @media (max-width: $breakpoint-small)
                             max-width: 50%
-
+        
         .users
             display: grid
             grid-template-columns: 1fr 1fr 1fr 1fr
